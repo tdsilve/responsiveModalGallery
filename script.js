@@ -1,7 +1,8 @@
-/*This script has three events:
-1. Close modal window when the modal's button is clicked
-2. Open modal window and display the selected image  
-3. Close modal window when the user click outside image displayed
+/*The script contains three events that allow the events described above:
+
+1. Close a modal window when the modal's button is clicked;
+2. Open a modal window and display the selected image;
+3. Close a modal window when the user clicks outside image displayed.
 */
 
 
@@ -10,15 +11,15 @@ const modalWindow = document.querySelector('.modal');
 const modalContent = document.querySelector('.modal-content');
 const modalBtn = document.querySelector('.modal-btn');
 
-// 1. Close modal window when the modal's button is clicked
+// 1. Close a modal window when the modal's button is clicked
 modalBtn.addEventListener('click', closeModal);
 
-// 2. Open modal window and display the selected image
+// 2. Open a modal window and display the selected image
 imgs.forEach((img) => {
     img.addEventListener('click', openImage);
 });
 
-// 3. Close modal window when the user click outside image displayed
+// 3. Close a modal window when the user clicks outside image displayed.
 modalWindow.addEventListener('click', (evt) =>{
     console.log(isClickedOutside(evt));
     if (isClickedOutside){
